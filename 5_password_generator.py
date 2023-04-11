@@ -19,18 +19,20 @@ while is_int == False:
 
 
 def pass_generator(list, range_num):
+    """"It's a function for generating a random choices from a list, first argument is a list and second argument is a number from user input"""
     ls_letters = []
     for letter in range(range_num):
         ls_letters.append(random.choice(list))
     return (ls_letters)
 
+# generate a random password 
 rand_letters = pass_generator(letters, nr_letters)
 rand_numbers = pass_generator(numbers, nr_numbers)
 rand_symbols = pass_generator(symbols, nr_symbols)
 
-print(rand_letters, rand_numbers, rand_symbols)
-
+# concatenate 3 lists in one list and shuffle it
 list_pass = rand_numbers + rand_letters + rand_symbols
 random.shuffle(list_pass)
+
 print("Your new password is: ")
 print(''.join(list_pass))
