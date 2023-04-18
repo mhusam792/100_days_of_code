@@ -1,3 +1,5 @@
+# Need to update code and handling errors
+
 import random 
 from art import logo
 from replit import clear
